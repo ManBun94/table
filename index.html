@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+    <title>Sorting Tables w/ JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/assets/dcode.css">
+    <link rel="stylesheet" href="/src/tablesort.css">
+</head>
+
+
+<style>
+    .table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 1.5em;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px white(0, 0, 0, 0.15);
+    }
+
+    .table thead tr {
+        background-color: transparent;
+        color: black;
+        text-align: left;
+        font-weight: bold;
+    }
+    .table tbody tr {
+        color: black;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px 15px;
+    }
+
+    .table tbody tr {
+        border-bottom: 1px solid grey;
+    }
+
+    .content tbody tr:nth-of-type(even) {
+        background-color: grey
+    }
+
+    .table tbody tr:last-of-type {
+        border-bottom: 2px solid whitesmoke;
+    }
+
+    .table-sortable th {
+    cursor: pointer;
+}
+
+.table-sortable .th-sort-asc::after {
+    content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after {
+    content: "\25be";
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+    text-decoration: underline ;
+
+}
+</style>
+
+<body>
+    <table class="table table-sortable">
+        <thead>
+            <tr>
+                <th>Gamertags</th>
+                <th>Goals</th>
+                <th>Assists</th>
+                <th>Passes Completed</th>
+                <th>Passes Failed</th>
+                <th>Tackles Won</th>
+                <th>Blocks</th>
+                <th>Interceptions</th>
+                <th>Clearances</th>
+                <th>Possession Won</th>
+                <th>Saves</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hrzn Manik</td>
+                <td>5</td>
+                <td>7</td>
+                <td>24</td>
+                <td>116</td>
+                <td>14</td>
+                <td>4</td>
+                <td>1</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>ManBun1468</td>
+                <td>1</td>
+                <td>2</td>
+                <td>57</td>
+                <td>12</td>
+                <td>1</td>
+                <td>3</td>
+                <td>8</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Hrzn Manik</td>
+                <td>5</td>
+                <td>7</td>
+                <td>24</td>
+                <td>116</td>
+                <td>14</td>
+                <td>4</td>
+                <td>1</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>ManBun1468</td>
+                <td>1</td>
+                <td>2</td>
+                <td>57</td>
+                <td>12</td>
+                <td>1</td>
+                <td>3</td>
+                <td>8</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+            </tr><tr>
+                <td>Hrzn Manik</td>
+                <td>5</td>
+                <td>7</td>
+                <td>24</td>
+                <td>116</td>
+                <td>14</td>
+                <td>4</td>
+                <td>1</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>ManBun1468</td>
+                <td>1</td>
+                <td>2</td>
+                <td>57</td>
+                <td>12</td>
+                <td>1</td>
+                <td>3</td>
+                <td>8</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+            </tr><tr>
+                <td>Hrzn Manik</td>
+                <td>5</td>
+                <td>7</td>
+                <td>24</td>
+                <td>116</td>
+                <td>14</td>
+                <td>4</td>
+                <td>1</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>ManBun1468</td>
+                <td>1</td>
+                <td>2</td>
+                <td>57</td>
+                <td>12</td>
+                <td>1</td>
+                <td>3</td>
+                <td>8</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script src="./src/tablesort.js"></script>
+</body>
